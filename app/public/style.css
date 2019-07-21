@@ -1,0 +1,106 @@
+html, body {
+    background-color: #9d8d8f;
+}
+
+.jumbotron {
+    margin-top: 20px;
+    background-color: #5a5560;
+}
+
+.card-header {
+    background-color: #5a5560;
+    color: whitesmoke;
+    border-bottom: solid 1px #cebc81;
+}
+
+.card {
+    border: none;
+    background: #baa19b;
+    color: whitesmoke;
+}
+
+a {
+    color: whitesmoke;
+}
+
+.btn {
+    background-color: #9d8d8f;
+    border-color: #cebc81;
+    width: 200px;
+    height: 50px;
+    margin: 50px 0;
+}
+
+.btn:hover {
+    background-color: #5a5560;
+    border-color: #faed26;
+}
+
+.btn:click {
+    background-color: #5a5560;
+    border-color: #faed26;
+}
+
+hr {
+    background-color: #cebc81;
+}
+
+h1, h3 {
+    color: whitesmoke;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 1.25rem;
+    margin-bottom: .25rem;
+    margin-top: 4rem;
+}
+
+.form-check-label {
+    font-size: 1.2rem;
+    height: 7rem;
+    width: 7rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1.5px solid #cebc81;
+    background-color: #9d8d8f;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.choices .form-check-input.is-answered:checked~.form-check-label {
+    color: whitesmoke;
+    background-color: #5a5560;
+    border-color: #faed26;
+}
+
+.choices .form-check-input.is-answered:not(:checked)~.form-check-label {
+    opacity: .5;
+    /* border-color: #cdcdcd;
+    color: #999; */
+}
+
+.choices {
+    flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+    justify-content: space-evenly;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 25px 15% 0 15%;
+}
