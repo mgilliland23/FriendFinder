@@ -22,7 +22,7 @@ module.exports = function (app) {
         console.log("From server:  ");
         console.log(newFriend);
 
-        friendsData.push(newFriend);
+        //friendsData.push(newFriend);
 
         console.log("Matched with: ");
         console.log(matchedFriend);
