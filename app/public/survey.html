@@ -8,13 +8,19 @@
         <title>Survey</title>
 
         <!-- Latest compiled and minified CSS & JS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+        <link rel="stylesheet" href="assets/style.css">
 
 
 
@@ -27,7 +33,8 @@
         <div class="jumbotron">
             <h1><span class="glyphicon glyphicon-tasks"></span> Survey Questions</h1>
             <hr>
-            <h3>Fill in the form below to be matched with a compatible friend</h3>
+            <h3>Complete the survey below to see which character from</h3>
+            <h3>It's Always Sunny in Philladelphia you are most like</h3>
             <br>
 
 
@@ -64,8 +71,26 @@
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="build_survey.js"></script>
-    <script type="text/javascript" src="survey.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="compatability-modal" tabindex="-1" role="dialog"
+        aria-labelledby="compatabilityModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/build_survey.js"></script>
+    <script type="text/javascript" src="assets/survey.js"></script>
 </body>
 
 </html>

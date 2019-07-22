@@ -1,5 +1,6 @@
 html, body {
-    background-color: #9d8d8f;
+    background-color: #978d8e;
+    color: white;
 }
 
 .jumbotron {
@@ -19,12 +20,36 @@ html, body {
     color: whitesmoke;
 }
 
+.modal-body img {
+    height: 300px;
+    width: auto;
+}
+
+.modal-footer .btn {
+    margin: 10px auto;
+}
+
+.modal-header {
+    border-color: #cebc81;
+    color: white;
+    background-color: #5a5560;
+}
+
+.modal-footer {
+    border-color: #cebc81;
+    background-color: #5a5560;
+}
+
+.modal-body {
+    background-color: #baa19b;
+}
+
 a {
     color: whitesmoke;
 }
 
 .btn {
-    background-color: #9d8d8f;
+    background-color: #978d8e;
     border-color: #cebc81;
     width: 200px;
     height: 50px;
@@ -61,12 +86,12 @@ label {
 
 .form-check-label {
     font-size: 1.2rem;
-    height: 7rem;
-    width: 7rem;
+    height: 110px;
+    width: 110px;
     margin: 0 auto;
     border-radius: 50%;
     border: 1.5px solid #cebc81;
-    background-color: #9d8d8f;
+    background-color: #978d8e;
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -74,6 +99,12 @@ label {
     text-align: center;
     -webkit-box-pack: center;
     justify-content: center;
+    z-index: 2;
+}
+
+.form-check-label:hover {
+    box-shadow: 0 0 5px #faed26;
+    background-color: #5a5560;
 }
 
 input[type=radio] {
@@ -87,9 +118,13 @@ input[type=radio] {
 }
 
 .choices .form-check-input.is-answered:not(:checked)~.form-check-label {
-    opacity: .5;
+    opacity: .6;
     /* border-color: #cdcdcd;
     color: #999; */
+}
+
+.form-check-inline {
+    margin-right: 0 !important;
 }
 
 .choices {
@@ -103,4 +138,17 @@ input[type=radio] {
     -webkit-box-pack: justify;
     justify-content: space-between;
     margin: 25px 15% 0 15%;
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.line {
+    stroke: #cebc81;
+    stroke-width: 3;
 }

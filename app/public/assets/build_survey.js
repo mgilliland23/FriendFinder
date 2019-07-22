@@ -13,10 +13,16 @@ for (var i = 0; i < questions.length; i++) {
     for (var j = 1; j <= 5; j++) {
         html += " <div class='form-check form-check-inline'>"
         html += "<input class='choice-input form-check-input' type='radio' name='question" + i + "' ";
-        html += "id='question" + i + 'Radio' + j + "' value='" + j + "'>";
+        html += "id='question" + i + 'Radio' + j + "' value=" + j + ">";
         html += "<label class='choice-label form-check-label' for='question" + i + 'Radio' + j + "'>"
         html += choices[j] + " </label>" + "</div>";
     }
+
+    var svg = "<svg class='svg' height='100' width='100%'><g class='g' fill='none' stroke='black'>";
+    svg += "<path class='line' stroke-width='2' d = 'M5 55 l2000000 0' /></g></svg>";
+
+    html += svg;
+
     $(".card-body").append(html);
 }
 var submit = "<button type='submit' class='btn btn-primary submit'>Submit</button>";

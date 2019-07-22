@@ -1,11 +1,9 @@
 const express = require("express");
-const path = require("path");
+
 
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-require('./app/routing/apiRoutes.js')(app);
-require('./app/routing/htmlRoutes.js')(app);
 
 
 var friends = [];
@@ -13,8 +11,13 @@ var friends = [];
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//This is where front end scripts, stylesheets and other assets live
+app.use(express.static(__dirname + '/app/public'));
 
 
+
+require('./app/routing/apiRoutes.js')(app);
+require('./app/routing/htmlRoutes.js')(app);
 
 
 
