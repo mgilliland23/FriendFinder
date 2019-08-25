@@ -1,154 +1,170 @@
-html, body {
-    background-color: #978d8e;
-    color: white;
+html,
+body {
+  background-color: #978d8e;
+  color: white;
 }
 
 .jumbotron {
-    margin-top: 20px;
-    background-color: #5a5560;
+  margin-top: 20px;
+  background-color: #5a5560;
+  border: solid 1px #cebc81;
+}
+
+.btn-custom {
+  color: white;
+  background-color: #978d8e;
+  border-color: #cebc81;
+  width: 200px;
+  height: 50px;
+  margin: 50px 0;
+}
+
+.btn-custom:active,
+.btn:active {
+  color: white;
+  box-shadow: 0 0 5px #faed26;
+}
+
+.btn-custom:hover {
+  color: white;
+  background-color: #5a5560;
+  border-color: #faed26;
 }
 
 .card-header {
-    background-color: #5a5560;
-    color: whitesmoke;
-    border-bottom: solid 1px #cebc81;
+  background-color: #5a5560;
+  color: whitesmoke;
+  border-bottom: solid 1px #cebc81;
 }
 
 .card {
-    border: none;
-    background: #baa19b;
-    color: whitesmoke;
+  border: none;
+  background: #baa19b;
+  color: whitesmoke;
+  border: solid 1px #cebc81;
+}
+
+.modal-content {
+  border: solid 1px #cebc81;
 }
 
 .modal-body img {
-    height: 300px;
-    width: auto;
+  height: 300px;
+  width: auto;
 }
 
 .modal-footer .btn {
-    margin: 10px auto;
+  margin: 10px auto;
 }
 
 .modal-header {
-    border-color: #cebc81;
-    color: white;
-    background-color: #5a5560;
+  border-color: #cebc81;
+  color: white;
+  background-color: #5a5560;
 }
 
 .modal-footer {
-    border-color: #cebc81;
-    background-color: #5a5560;
+  border-color: #cebc81;
+  background-color: #5a5560;
 }
 
 .modal-body {
-    background-color: #baa19b;
+  background-color: #baa19b;
 }
 
 a {
-    color: whitesmoke;
-}
-
-.btn {
-    background-color: #978d8e;
-    border-color: #cebc81;
-    width: 200px;
-    height: 50px;
-    margin: 50px 0;
-}
-
-.btn:hover {
-    background-color: #5a5560;
-    border-color: #faed26;
-}
-
-.btn:click {
-    background-color: #5a5560;
-    border-color: #faed26;
+  color: whitesmoke;
 }
 
 hr {
-    background-color: #cebc81;
+  background-color: #cebc81;
 }
 
-h1, h3 {
-    color: whitesmoke;
+h1,
+h3 {
+  color: whitesmoke;
 }
 
 .form-group {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 label {
-    font-size: 1.25rem;
-    margin-bottom: .25rem;
-    margin-top: 4rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  margin-top: 4rem;
 }
 
 .form-check-label {
-    font-size: 1.2rem;
-    height: 110px;
-    width: 110px;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 1.5px solid #cebc81;
-    background-color: #978d8e;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    text-align: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    z-index: 2;
+  font-size: 1.2rem;
+  height: 110px;
+  width: 110px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1.5px solid #cebc81;
+  background-color: #978d8e;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  z-index: 2;
 }
 
 .form-check-label:hover {
-    box-shadow: 0 0 5px #faed26;
-    background-color: #5a5560;
+  box-shadow: 0 0 5px #faed26;
+  background-color: #5a5560;
 }
 
-input[type=radio] {
-    display: none;
+input[type="radio"] {
+  display: none;
 }
 
-.choices .form-check-input.is-answered:checked~.form-check-label {
-    color: whitesmoke;
-    background-color: #5a5560;
-    border-color: #faed26;
+.choices .form-check-input.is-answered:checked ~ .form-check-label {
+  color: whitesmoke;
+  background-color: #5a5560;
+  border-color: #faed26;
 }
 
-.choices .form-check-input.is-answered:not(:checked)~.form-check-label {
-    opacity: .6;
-    /* border-color: #cdcdcd;
+.choices .form-check-input.is-answered:not(:checked) ~ .form-check-label {
+  opacity: 0.6;
+  /* border-color: #cdcdcd;
     color: #999; */
 }
 
 .form-check-inline {
-    margin-right: 0 !important;
+  margin-right: 0 !important;
 }
 
 .choices {
-    flex-wrap: nowrap;
-    -webkit-box-pack: space-evenly;
-    justify-content: space-evenly;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+  flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+  justify-content: space-evenly;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media screen and (min-width: 968px) {
+  .choices {
     margin: 25px 15% 0 15%;
-    position: relative;
+  }
 }
 
 svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .line {
-    stroke: #cebc81;
-    stroke-width: 3;
+  stroke: #cebc81;
+  stroke-width: 3;
 }

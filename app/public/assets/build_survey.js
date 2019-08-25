@@ -25,5 +25,5 @@ for (var i = 0; i < questions.length; i++) {
 
     $(".card-body").append(html);
 }
-var submit = "<button type='submit' class='btn btn-primary submit'>Submit</button>";
+var submit = "<button type='submit' class='btn btn-custom submit'>Submit</button>";
 $(".card-body").append(submit);
