@@ -87,6 +87,7 @@ h3 {
 
 .form-group {
   margin-bottom: 30px;
+  padding: 0 5%;
 }
 
 label {
@@ -97,8 +98,8 @@ label {
 
 .form-check-label {
   font-size: 1.2rem;
-  height: 110px;
-  width: 110px;
+  height: 7rem;
+  width: 7rem;
   margin: 0 auto;
   border-radius: 50%;
   border: 1.5px solid #cebc81;
@@ -149,13 +150,7 @@ input[type="radio"] {
   -webkit-box-pack: justify;
   justify-content: space-between;
   position: relative;
-  margin-top: 25px;
-}
-
-@media screen and (min-width: 968px) and (max-width: 18000px) {
-  .choices {
-    margin: 25px 15% 0 15%;
-  }
+  margin: 25px 0 0 0;
 }
 
 svg {
