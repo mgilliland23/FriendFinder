@@ -1,51 +1,66 @@
-html,
-body {
-  background-color: #978d8e;
+html, body {
+  background-color: #181818;
   color: white;
+}
+
+a:hover {
+  color: #F5D10D;
+  text-decoration: none;
 }
 
 .jumbotron {
   margin-top: 20px;
-  background-color: #5a5560;
-  border: solid 1px #cebc81;
+  border: solid 1px #F5D10D;
+  background-color: #020202;
+}
+
+.survey-jumbotron {
+  background: url("/assets/img/SunnyBanner.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+}
+
+.card-header {
+  color: #414141 !important;
+  padding-top: 20px;
 }
 
 .btn-custom {
   color: white;
-  background-color: #978d8e;
-  border-color: #cebc81;
+  background-color: #414141;
+  border-color: #F5D10D;
   width: 200px;
   height: 50px;
   margin: 50px 0;
 }
 
-.btn-custom:active,
-.btn:active {
+.btn-custom:active, .btn:active {
   color: white;
-  box-shadow: 0 0 5px #faed26;
+  box-shadow: 0 0 5px #F5D10D;
 }
 
 .btn-custom:hover {
   color: white;
-  background-color: #5a5560;
-  border-color: #faed26;
+  background-color: #020202;
+  border-color: #F5D10D;
 }
 
 .card-header {
-  background-color: #5a5560;
+  background-color: #F5D10D;
   color: whitesmoke;
-  border-bottom: solid 1px #cebc81;
+  border-bottom: solid 1px #F5D10D;
 }
 
 .card {
   border: none;
-  background: #baa19b;
+  background: #414141;
   color: whitesmoke;
-  border: solid 1px #cebc81;
+  border: solid 1px #F5D10D;
 }
 
 .modal-content {
-  border: solid 1px #cebc81;
+  border: solid 1px #F5D10D;
 }
 
 .modal-body img {
@@ -58,18 +73,26 @@ body {
 }
 
 .modal-header {
-  border-color: #cebc81;
+  border-color: #F5D10D;
   color: white;
-  background-color: #5a5560;
+  border-bottom: none;
+  background-color: #181818;
 }
 
 .modal-footer {
-  border-color: #cebc81;
-  background-color: #5a5560;
+  border-color: #F5D10D;
+  border-top: none;
+  background-color: #181818;
 }
 
 .modal-body {
-  background-color: #baa19b;
+  background-color: #181818;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #F5D10D;
+  border-color: #F5D10D;
 }
 
 a {
@@ -77,11 +100,10 @@ a {
 }
 
 hr {
-  background-color: #cebc81;
+  background-color: #F5D10D;
 }
 
-h1,
-h3 {
+h1, h3 {
   color: whitesmoke;
 }
 
@@ -102,8 +124,8 @@ label {
   width: 7rem;
   margin: 0 auto;
   border-radius: 50%;
-  border: 1.5px solid #cebc81;
-  background-color: #978d8e;
+  border: 1.5px solid #F5D10D;
+  background-color: #2d292a;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -115,22 +137,22 @@ label {
 }
 
 .form-check-label:hover {
-  box-shadow: 0 0 5px #faed26;
-  background-color: #5a5560;
+  box-shadow: 0 0 5px #F5D10D;
+  background-color: #181818;
 }
 
 input[type="radio"] {
   display: none;
 }
 
-.choices .form-check-input.is-answered:checked ~ .form-check-label {
+.choices .form-check-input.is-answered:checked~.form-check-label {
   color: whitesmoke;
-  background-color: #5a5560;
-  border-color: #faed26;
+  background-color: #181818;
+  border-color: #F5D10D;
 }
 
-.choices .form-check-input.is-answered:not(:checked) ~ .form-check-label {
-  opacity: 0.6;
+.choices .form-check-input.is-answered:not(:checked)~.form-check-label {
+  opacity: 0.4;
   /* border-color: #cdcdcd;
     color: #999; */
 }
@@ -161,6 +183,6 @@ svg {
 }
 
 .line {
-  stroke: #cebc81;
+  stroke: #F5D10D;
   stroke-width: 3;
 }

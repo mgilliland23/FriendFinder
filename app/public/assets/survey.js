@@ -21,12 +21,8 @@ $(".submit").on("click", function(event) {
 
   // Here we grab the form elements
   var newFriend = {
-    name: $("#name")
-      .val()
-      .trim(),
-    photo_url: $("#photo_url")
-      .val()
-      .trim(),
+    name: "name",
+    photo_url: "photo.url",
     scores: scores
   };
 
@@ -44,7 +40,7 @@ $(".submit").on("click", function(event) {
       var img = $("<img>").addClass("card-img-top  mx-auto d-block");
       img.attr("src", data.photo_url);
 
-      var h5 = $("<h5>").text("You are most compatible with " + data.name);
+      var h5 = $("<h5>").text("You're most compatible with " + data.name);
       $(".modal-header").empty();
       $(".modal-header").append(h5);
 
