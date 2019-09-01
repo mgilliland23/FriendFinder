@@ -133,7 +133,7 @@ label {
   text-align: center;
   -webkit-box-pack: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 500;
 }
 
 .form-check-label:hover {
@@ -145,16 +145,17 @@ input[type="radio"] {
   display: none;
 }
 
-.choices .form-check-input.is-answered:checked~.form-check-label {
+.is-answered {
+  opacity: 0.4;
+  /* border-color: #cdcdcd;
+  color: #999; */
+}
+
+.selectedAnswer {
   color: whitesmoke;
   background-color: #181818;
   border-color: #F5D10D;
-}
-
-.choices .form-check-input.is-answered:not(:checked)~.form-check-label {
-  opacity: 0.4;
-  /* border-color: #cdcdcd;
-    color: #999; */
+  opacity: 1 !important;
 }
 
 .form-check-inline {
@@ -175,14 +176,44 @@ input[type="radio"] {
   margin: 25px 0 0 0;
 }
 
-svg {
+ul {
+  width: 100%;
+  padding: 0 6rem;
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  /* Default */
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  position: relative;
+}
+
+li:not(:last-child):after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  height: 2px;
+  width: 70%;
+  background: #F5D10D;
+  top: 3.5rem;
+  right: -5rem;
   z-index: 1;
 }
 
-.line {
-  stroke: #F5D10D;
-  stroke-width: 3;
+li.selectedParent:after {
+  opacity: 0.4 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-check-label {
+    font-size: .35rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: .5px solid #F5D10D;
+  }
+  .survey-jumbotron {
+    min-height: 175px;
+  }
 }

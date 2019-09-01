@@ -1,29 +1,72 @@
-var questions = ['I tend to be quiet.', 'I am compassionate and have a soft heart.', 'I tend to be disorganized.',
-    'I worry a lot.', 'I am fascinated by art, music or literature.', 'I am dominant and act as a leader.',
-    'I am sometimes rude to others.', 'I have difficulty getting started on tasks.', 'I am full of energy.',
-    'I assume the best about people.'];
-var choices = ['', 'Disagree Strongly', 'Disagree a Litte', 'Neutral', 'Agree a Little', 'Agree Strongly'];
-
-
+var questions = [
+  "I tend to be quiet.",
+  "I am compassionate and have a soft heart.",
+  "I tend to be disorganized.",
+  "I worry a lot.",
+  "I am fascinated by art, music or literature.",
+  "I am dominant and act as a leader.",
+  "I am sometimes rude to others.",
+  "I have difficulty getting started on tasks.",
+  "I am full of energy.",
+  "I assume the best about people."
+];
+var choices = [
+  "",
+  "Disagree Strongly",
+  "Disagree a Litte",
+  "Neutral",
+  "Agree a Little",
+  "Agree Strongly"
+];
 
 for (var i = 0; i < questions.length; i++) {
-    var html = "<div class='form-group text-center'><label>" + questions[i] + "</label> <br>";
-    html += " <div class='choices'>";
+  var formGroup = $("<div>").addClass("form-group text-center");
+  var questionLabel = $("<label>").text(questions[i]);
 
-    for (var j = 1; j <= 5; j++) {
-        html += " <div class='form-check form-check-inline'>"
-        html += "<input class='choice-input form-check-input' type='radio' name='question" + i + "' ";
-        html += "id='question" + i + 'Radio' + j + "' value=" + j + ">";
-        html += "<label class='choice-label form-check-label' for='question" + i + 'Radio' + j + "'>"
-        html += choices[j] + " </label>" + "</div>";
-    }
+  formGroup.append(questionLabel);
+  $(".card-body").append(formGroup);
 
-    var svg = "<svg class='svg' height='100' width='100%'><g class='g' fill='none' stroke='black'>";
-    svg += "<path class='line' stroke-width='2' d = 'M5 55 l2000000 0' /></g></svg>";
+  var answers = $("<div>").addClass("choices");
 
-    html += svg;
+  var ul = $("<ul>");
 
-    $(".card-body").append(html);
+  for (var j = 1; j <= 5; j++) {
+    //var formCheck = $("div").addClass("form-check form-check-inline");
+    // html += " <div class='form-check form-check-inline'>"
+    var input = $("<input>")
+      .addClass("choice-input form-check-input")
+      .attr("type", "radio")
+      .attr("name", "question" + i);
+    input.attr("id", "question" + i + "Radio" + j);
+    input.attr("value", i);
+    // var inputTD = $("<td>");
+
+    // inputTD.append(input);
+    // inputTR.append(inputTD);
+
+    var label = $("<label>")
+      .addClass("choice-label form-check-label")
+      .attr("for", "question" + i + "Radio" + j);
+    label.text(choices[j]);
+
+    // var labelTD = $("<td>");
+
+    // labelTD.append(label);
+    // labelTR.append(labelTD);
+
+    var li = $("<li>");
+    li.append(label);
+    li.append(input);
+    ul.append(li);
+  }
+
+  //   answersTableBody.append(labelTR);
+  //   answersTableBody.append(inputTR);
+
+  //   answers.append($("<table>").append(answersTableBody));
+  answers.append(ul);
+  $(".card-body").append(answers);
 }
-var submit = "<button type='submit' class='btn btn-custom submit'>Submit</button>";
+var submit =
+  "<button type='submit' class='btn btn-custom submit'>Submit</button>";
 $(".card-body").append(submit);

@@ -1,10 +1,35 @@
-$("input[type=radio]").on("click", function(event) {
-  //event.preventDefault();
+$("label").on("click", function(event) {
+  event.preventDefault();
+  console.log("button clicked");
+
+  console.log($(this).attr("for"));
+
+  // var labelID = $(this).attr("for");
+
+  // $("#" + labelID).attr("checked", true);
+
+  var input = $(this)
+    .parent()
+    .find("input");
+  if (input.attr("checked")) {
+    input.prop("checked", false);
+  } else {
+    input.attr("checked", true);
+  }
+
+  // $("#" + selectedAnswer).addClass("is-answered");
+
   $(this)
     .parent()
     .parent()
-    .find("input[type=radio]")
+    .find("li")
     .addClass("is-answered");
+
+  $(this).addClass("selectedAnswer");
+  $(this)
+    .parent()
+    .removeClass("is-answered")
+    .addClass("selectedParent");
 });
 
 //When the submit button is clicked, send the answers to the server and match with a friend
@@ -16,6 +41,8 @@ $(".submit").on("click", function(event) {
   //Get the answers for each question
   for (var i = 0; i < answers.length; i++) {
     var val = answers[i].getAttribute("value");
+    console.log("value: ", val);
+
     scores.push(parseInt(val, 10));
   }
 
@@ -62,21 +89,21 @@ $(".form-check").on("click", function() {
     .css("opacity", ".1");
 });
 
-$(document).ready(function() {
-  // Optimalisation: Store the references outside the event handler:
-  var $window = $(window);
-  var $choices = $(".choices");
+// $(document).ready(function() {
+//   // Optimalisation: Store the references outside the event handler:
+//   var $window = $(window);
+//   var $choices = $(".choices");
 
-  function checkWidth() {
-    var windowsize = $window.width();
-    console.log("window size: ", windowsize);
-    if (windowsize > 1000) {
-      //if the window is greater than 440px wide then add margin to the choices
-      $choices.css("margin", "25px 10% 0 10%");
-    }
-  }
-  // Execute on load
-  checkWidth();
-  // Bind event listener
-  $(window).resize(checkWidth);
-});
+//   function checkWidth() {
+//     var windowsize = $window.width();
+//     console.log("window size: ", windowsize);
+//     if (windowsize > 1000) {
+//       //if the window is greater than 440px wide then add margin to the choices
+//       $choices.css("margin", "25px 10% 0 10%");
+//     }
+//   }
+//   // Execute on load
+//   checkWidth();
+//   // Bind event listener
+//   $(window).resize(checkWidth);
+// });
